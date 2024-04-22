@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="instrumentos">
     <!-- Navbar -->
     <nav class="navbar bg-gray-800 text-white py-8">
       <ul class="flex justify-center">
@@ -10,14 +10,14 @@
       </ul>
     </nav>
 
-    <div class="p-32 main-div flex mt-8 bg-gray-200">Carrosel</div>
+    <div class="p-32 main-div flex mt-8 bg-gray-200">img de instrumentos</div>
 
     <div class="p-20 ml-8 mr-8 flex-1 mt-8 bg-gray-200">descrição</div>
   
     <!-- Div principal -->
     <div class="px-8 main-div flex mt-8">
       <div class="left-div flex-1 bg-gray-200 p-4">
-        img instrumentos<!-- Conteúdo da div esquerda -->
+        img instrumento<!-- Conteúdo da div esquerda -->
       </div>
       <div class="right-div flex-1 bg-gray-200 p-4 ml-4">
         <!-- Divs responsivas -->
@@ -30,47 +30,46 @@
         <div class="responsive-div bg-gray-300 p-4">
           <h2>API Spotify</h2>
         </div>
-      </div>
-    </div>
-
-    <div class="px-8 main-div flex mt-8">
-      
-      <div class="right-div flex-1 bg-gray-200 p-4 ">
-        <!-- Divs responsivas -->
-        <div class="responsive-div bg-gray-300 mb-4 p-4">
-          <h2>Titulo</h2>
-        </div>
-        <div class="responsive-div bg-gray-300 mb-4 p-24">
-          <h2>Descrição + Curiosidades</h2>
-        </div>
-        <div class="responsive-div bg-gray-300 p-4">
-          <h2>API Spotify</h2>
-        </div>
-      </div>
-      <div class="left-div flex-1 bg-gray-200 p-4 ml-4">
-        img artistas<!-- Conteúdo da div esquerda -->
       </div>
     </div>
 
     <div class="px-8 main-div flex mt-8">
       <div class="left-div flex-1 bg-gray-200 p-4">
-        Sobre<!-- Conteúdo da div esquerda -->
+        img instrumento ou artista<!-- Conteúdo da div esquerda -->
       </div>
       <div class="right-div flex-1 bg-gray-200 p-4 ml-4">
         <!-- Divs responsivas -->
         <div class="responsive-div bg-gray-300 mb-4 p-4">
-          <h2>Desenvolvedores</h2>
+          <h2>Titulo</h2>
         </div>
         <div class="responsive-div bg-gray-300 mb-4 p-24">
-          <h2>Descrição + Curiosidades sobre nós</h2>
+          <h2>Descrição + Curiosidades</h2>
         </div>
         <div class="responsive-div bg-gray-300 p-4">
-          <h2>Repo do Github</h2>
+          <h2>API Spotify</h2>
         </div>
       </div>
     </div>
-     <!-- Footer -->
-     <footer class="footer bg-gray-800 text-white mt-12 py-8 px-12">
+
+    <div class="px-8 main-div flex mt-8">
+      <div class="left-div flex-1 bg-gray-200 p-4">
+        img instrumento ou artista<!-- Conteúdo da div esquerda -->
+      </div>
+      <div class="right-div flex-1 bg-gray-200 p-4 ml-4">
+        <!-- Divs responsivas -->
+        <div class="responsive-div bg-gray-300 mb-4 p-4">
+          <h2>Titulo</h2>
+        </div>
+        <div class="responsive-div bg-gray-300 mb-4 p-24">
+          <h2>Descrição + Curiosidades</h2>
+        </div>
+        <div class="responsive-div bg-gray-300 p-4">
+          <h2>API Spotify</h2>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer bg-gray-800 text-white mt-12 py-8 px-12">
       <ul class="flex justify-center">
         <li><a href="#" class="px-4 py-2 hover:bg-gray-600">Home</a></li>
         <li><a href="#" class="px-4 py-2 hover:bg-gray-600">Instrumentos</a></li>
@@ -83,7 +82,7 @@
 
 <script>
 export default {
-  name: 'home-component',
+  name: 'instrumentos-component',
   // Adicione seus dados, métodos e lógica aqui, se necessário
 }
 </script>
