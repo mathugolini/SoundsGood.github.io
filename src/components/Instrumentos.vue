@@ -3,10 +3,10 @@
     <!-- Navbar -->
     <nav class="navbar bg-gray-800 text-white py-8">
       <ul class="flex justify-center">
-        <li><a href="#" class="px-4 py-2 hover:bg-gray-600">Home</a></li>
-        <li><a href="#" class="px-4 py-2 hover:bg-gray-600">Instrumentos</a></li>
-        <li><a href="#" class="px-4 py-2 hover:bg-gray-600">Artistas</a></li>
-        <li><a href="#" class="px-4 py-2 hover:bg-gray-600">Sobre</a></li>
+        <router-link to="/" class="px-4 py-2 hover:bg-gray-600">Home</router-link>
+        <router-link to="/instrumentos" class="px-4 py-2 hover:bg-gray-600">Instrumentos</router-link>
+        <router-link to="/artistas" class="px-4 py-2 hover:bg-gray-600">Artistas</router-link>
+        <router-link to="/sobre" class="px-4 py-2 hover:bg-gray-600">Sobre</router-link>
       </ul>
     </nav>
 

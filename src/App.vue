@@ -1,14 +1,12 @@
 <template>
-  <Sobre/>
+  <router-view />
 </template>
 
 <script>
-import Sobre from './components/Sobre.vue'
 
 export default {
   name: 'App',
   components: {
-    Sobre
   }
 }
 </script>
