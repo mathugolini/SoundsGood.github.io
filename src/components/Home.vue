@@ -1,65 +1,74 @@
 <template>
   <div class="home">
-    <!-- Navbar -->
-    <nav class="navbar bg-gray-800 text-white py-8">
-      <ul class="flex justify-center">
-        <router-link to="/" class="px-4 py-2 hover:bg-gray-600">Home</router-link>
-        <router-link to="/instrumentos" class="px-4 py-2 hover:bg-gray-600">Instrumentos</router-link>
-        <router-link to="/artistas" class="px-4 py-2 hover:bg-gray-600">Artistas</router-link>
-        <router-link to="/sobre" class="px-4 py-2 hover:bg-gray-600">Sobre</router-link>
-      </ul>
+    <nav class="navbar bg-gray-800 text-white">
+      <div class="flex justify-between items-center px-4">
+        <div>
+          <img src="@/assets/logo.png" alt="Logo" class="object-cover h-auto md:w-32">
+        </div>
+        <ul class="flex">
+          <li class="md:hidden px-4 py-2 hover:bg-gray-600"><router-link to="/">Home</router-link></li>
+          <li class="px-4 py-2 hover:bg-gray-600"><router-link to="/instrumentos">Instrumentos</router-link></li>
+          <li class="px-4 py-2 hover:bg-gray-600"><router-link to="/artistas">Artistas</router-link></li>
+          <li class="px-4 py-2 hover:bg-gray-600"><router-link to="/sobre">Sobre</router-link></li>
+        </ul>
+      </div>
     </nav>
 
     <Carousel :autoplay="2000" :wrap-around="true">
       <Slide v-for="(image, index) in images" :key="index">
-    <!-- <Slide v-for="slide in 3" :key="slide"> -->
-      <img :src="image" class="carousel__item" alt="Slide {{ index + 1 }}"/>
-      <!-- <div class="carousel__item">{{ slide }}</div> -->
-    </Slide>
-    
-
-    <template #addons>
-      <Pagination />
-    </template>
-  </Carousel>
+        <img :src="image" class="carousel__item h-80 w-full object-cover" :alt="'Slide ' + (index + 1)" />
+      </Slide>
+      <template #addons>
+        <Pagination />
+      </template>
+    </Carousel>
 
     <div class="p-20 ml-8 mr-8 flex-1 mt-8 bg-gray-200">descrição</div>
-  
+
     <!-- Div principal -->
-    <div class="px-8 main-div flex mt-8">
-      <div class="left-div flex-1 bg-gray-200 p-4">
-        img instrumentos<!-- Conteúdo da div esquerda -->
+    <div class="px-8 main-div flex mt-8 ">
+      <div class="bg-gray-300 left-div flex-1 p-4 flex justify-center items-center">
+        <img class="h-60 object-cover rounded-lg"
+          src="https://images.unsplash.com/photo-1580745294190-1626b58bf7ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZWxlY3RyaWMlMjBndWl0YXJ8ZW58MHx8MHx8fDA%3D"
+          alt="Gibson SG Red Devil">
       </div>
-      <div class="right-div flex-1 bg-gray-200 p-4 ml-4">
+
+      <div class="right-div flex-1 p-4 ml-4">
         <!-- Divs responsivas -->
-        <div class="responsive-div bg-gray-300 mb-4 p-4">
-          <h2>Titulo</h2>
+        <div class="responsive-div text-gray-600  mb-4 p-4">
+          <h2 class="text-gray-800 text-2xl font-bold">Gibson SG - The Red Devil</h2>
         </div>
-        <div class="responsive-div bg-gray-300 mb-4 p-24">
-          <h2>Descrição + Curiosidades</h2>
+        <div class="text-black responsive-div mb-4 p-12">
+          <p>Esta guitarra é uma Gibson SG Standard de 1967 com um acabamento vermelho vibrante. Foi uma das principais
+            guitarras usadas por Angus em várias gravações e performances icônicas do AC/DC, incluindo a música "TNT". A
+            "Red Devil" é reconhecida por sua aparência distintiva e pelo som poderoso que contribui para o som único da
+            banda.</p>
         </div>
-        <div class="responsive-div bg-gray-300 p-4">
-          <h2>API Spotify</h2>
+        <div id="embed-iframe" class="responsive-div">
         </div>
       </div>
     </div>
 
     <div class="px-8 main-div flex mt-8">
-      
       <div class="right-div flex-1 bg-gray-200 p-4 ">
         <!-- Divs responsivas -->
         <div class="responsive-div bg-gray-300 mb-4 p-4">
-          <h2>Titulo</h2>
+          <h2 class="text-2xl font-bold">Gibson SG - The Red Devil</h2>
         </div>
         <div class="responsive-div bg-gray-300 mb-4 p-24">
-          <h2>Descrição + Curiosidades</h2>
+          <p>Esta guitarra é uma Gibson SG Standard de 1967 com um acabamento vermelho vibrante. Foi uma das principais
+            guitarras usadas por Angus em várias gravações e performances icônicas do AC/DC, incluindo a música "TNT". A
+            "Red Devil" é reconhecida por sua aparência distintiva e pelo som poderoso que contribui para o som único da
+            banda.</p>
         </div>
         <div class="responsive-div bg-gray-300 p-4">
           <h2>API Spotify</h2>
         </div>
       </div>
-      <div class="left-div flex-1 bg-gray-200 p-4 ml-4">
-        img artistas<!-- Conteúdo da div esquerda -->
+      <div class="left-div flex-1 p-4 ml-4">
+        <img
+          src="https://images.ctfassets.net/m8onsx4mm13s/5kWd9RtgWKg2qMRQaYprbR/6928bd0f0b15543e547552c7427db2d9/__static.gibson.com_product-images_Custom_CUSNAE888_Cherry_Red_beauty-640_480.png"
+          alt="Gibson SG Red Devil">
       </div>
     </div>
 
@@ -80,8 +89,8 @@
         </div>
       </div>
     </div>
-     <!-- Footer -->
-     <footer class="footer bg-gray-800 text-white mt-12 py-8 px-12">
+    <!-- Footer -->
+    <footer class="footer bg-gray-800 text-white mt-12 py-8 px-12">
       <ul class="flex justify-center">
         <router-link to="/" class="px-4 py-2 hover:bg-gray-600">Home</router-link>
         <router-link to="/instrumentos" class="px-4 py-2 hover:bg-gray-600">Instrumentos</router-link>
@@ -106,25 +115,35 @@ export default {
   data() {
     return {
       images: [
-        'https://blog.rodeowest.com.br/wp-content/uploads/2021/04/instrumentos-country.jpg',
-        'https://www.vagalume.com.br/dynimage/news44780-big.jpg',
-        'https://rocknbold.com/wp-content/uploads/2020/01/IMG_2169-1.jpg',
-        ]
-      }
+        'https://cdn.mos.cms.futurecdn.net/PVdoR9w5djEM2uPRT8jJJ4.jpg',
+        'https://www.musiclipse.com/wp-content/uploads/2014/03/Foo-Fighters-funny-wallpaper.jpg',
+        'https://images.unsplash.com/photo-1483101974978-cf266fdf1139?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmFuZGElMjBkZSUyMG0lQzMlQkFzaWNhJTIwJTdDfGVufDB8fDB8fHww',
+      ]
     }
+  },
+  mounted() {
+    const script = document.createElement('script');
+    script.src = 'https://open.spotify.com/embed/iframe-api/v1';
+    script.async = true;
+    document.body.appendChild(script);
+
+    window.onSpotifyIframeApiReady = () => {
+      const element = document.getElementById('embed-iframe');
+      const options = {
+        uri: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7LRMbd3LEoV5wZJvXT1Lwb?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'
+      };
+      element.innerHTML = options.uri;
+    };
+  },
 }
 </script>
 
 <style scoped>
-/* Estilos para o carrossel */
-
-
-/* Estilos globais */
 .home {
   font-family: Arial, sans-serif;
 }
 
-/* Estilos para a Navbar */
+
 .navbar ul {
   list-style-type: none;
 }
@@ -137,12 +156,12 @@ export default {
   text-decoration: none;
 }
 
-/* Estilos para as Divs responsivas */
+
 .responsive-div {
   border-radius: 4px;
 }
 
-/* Estilos específicos para telas menores que 768px */
+
 @media (max-width: 768px) {
   .main-div {
     flex-direction: column;

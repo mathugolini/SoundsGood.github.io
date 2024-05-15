@@ -1,6 +1,5 @@
 <template>
   <div class="instrumentos">
-    <!-- Navbar -->
     <nav class="navbar bg-gray-800 text-white py-8">
       <ul class="flex justify-center">
         <router-link to="/" class="px-4 py-2 hover:bg-gray-600">Home</router-link>
