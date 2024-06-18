@@ -1,48 +1,41 @@
 <template>
   <div class="sobre">
-    <!-- Navbar -->
-    <nav class="navbar bg-gray-800 text-white py-8">
-      <ul class="flex justify-center">
-        <router-link to="/" class="px-4 py-2 hover:bg-gray-600">Home</router-link>
-        <router-link to="/instrumentos" class="px-4 py-2 hover:bg-gray-600">Instrumentos</router-link>
-        <router-link to="/artistas" class="px-4 py-2 hover:bg-gray-600">Artistas</router-link>
-        <router-link to="/sobre" class="px-4 py-2 hover:bg-gray-600">Sobre</router-link>
-      </ul>
+    <nav class="navbar bg-gray-800 text-white">
+      <div class="flex justify-between items-center px-4">
+        <div>
+          <img src="@/assets/logo.png" alt="Logo" class="object-cover h-auto md:w-32">
+        </div>
+        <ul class="flex">
+          <li class="md:hidden px-4 py-2 hover:bg-gray-600"><router-link to="/">Home</router-link></li>
+          <li class="px-4 py-2 hover:bg-gray-600"><router-link to="/instrumentos">Instrumentos</router-link></li>
+          <li class="px-4 py-2 hover:bg-gray-600"><router-link to="/artistas">Artistas</router-link></li>
+          <li class="px-4 py-2 hover:bg-gray-600"><router-link to="/sobre">Sobre</router-link></li>
+        </ul>
+      </div>
     </nav>
-  
-    <!-- Div principal -->
-    <div class="px-8 main-div flex mt-8">
-      <div class="flex-1 bg-gray-200 p-24">
-        img Matheus <!-- Conteúdo da div esquerda -->
-      </div>
-      <div class="flex-1 bg-gray-200 p-24 ml-4">
-        img Marcio<!-- Conteúdo da div esquerda -->
-      </div>
-    </div>
 
-    <div class="px-8 main-div flex mt-8">
-      <div class="right-div flex-1 bg-gray-200 p-4">
-        <!-- Divs responsivas -->
-        <div class="responsive-div bg-gray-300 mb-4 p-4">
-          <h2>Matheus Hugolini</h2>
-        </div>
-        <div class="responsive-div bg-gray-300 mb-4 p-24">
-          <h2>Descrição + Curiosidades</h2>
-        </div>
-        <div class="responsive-div bg-gray-300 p-4">
-          <h2>Social Media</h2>
-        </div>
+    <!-- Div principal -->
+    <div class="px-4 md:px-32 main-div flex flex-col md:flex-row mt-8">
+      <div class="left-div flex-1 flex justify-center items-center mb-4 md:mb-0">
+        <img class="rounded-lg h-64 md:h-96" src="@/assets/matheuslogo.jpg" />
       </div>
-      <div class="right-div flex-1 bg-gray-200 p-4 ml-4">
+      <div class="right-div flex-1 bg-gray-200 p-4 md:ml-4">
         <!-- Divs responsivas -->
         <div class="responsive-div bg-gray-300 mb-4 p-4">
-          <h2>Marcio Cintra</h2>
+          <h2 class="text-darkOrgange font-bold text-darkOrange text-xl">Welcome About Myself!</h2>
         </div>
-        <div class="responsive-div bg-gray-300 mb-4 p-24">
-          <h2>Descrição + Curiosidades</h2>
+        <div class="responsive-div bg-gray-300 mb-4 p-4 md:p-12 text-justify">
+          <p>My name is Matheus Hugolini, I am a Full Stack Developer with a degree in Systems Analysis and Development.
+            I have a diverse
+            background, having lived in Canada for a year as part of an exchange program. I hold a certification in
+            cloud computing and am currently immersed in studying AWS Cloud and serverless applications. Beyond my
+            technical skills, I am a great communicator and a curiosity about myself is that I am a
+            digital influencer. I thrive on challenges and am always eager to tackle new opportunities in the tech
+            industry.</p>
         </div>
         <div class="responsive-div bg-gray-300 p-4">
-          <h2>Social Media</h2>
+          <a href="https://github.com/mathugolini" target="_blank" class="text-blue-500 underline">Check out my GitHub
+            repository</a>
         </div>
       </div>
     </div>
